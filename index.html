@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="icon" href="img/bookmark.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="parent container ">
+        <h1 class="my-5 position-relative text-center ">Bookmarker</h1>
+        <div class="child d-flex justify-content-center m-5">
+            <i class="icon1 fa-solid fa-bookmark fa-2xl pt-3 pe-2"></i>
+            <h2> Bookmark your favorite sites</h2>
+            <i class="icon2 fa-solid fa-bookmark fa-2xl pt-3 ps-2"></i>
+        </div>
+
+        <div class="">
+            <label for="siteName" class="pb-2 fw-bold ">
+                <i class="fa-solid fa-book-bookmark me-2"></i>
+                Site Name
+            </label>
+            <input type="text" oninput="nameValidation();" id="siteName" class="form-control mb-4" placeholder="Bookmark Name">
+
+            <label for="siteURL" class="pb-2 fw-bold">
+                <i class="fa-solid fa-link me-2"></i>
+                Site URL
+            </label>
+            <input type="text" oninput="urlValidation();" id="siteURL" class="form-control" placeholder="Website URL">
+
+
+            <button class="btn btn-submit px-5 mt-4 " onclick="getInfo()" id="subbtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+        </div>
+    </div>
+
+
+    <!--  -->
+    <div class="container">
+        <table class="table mt-5 text-center">
+            <thead >
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableBody">
+               <!-- <tr>
+                <td>1</td>
+                <td>name</td>
+                <td><button class="btn btn-green"><i class="fa-solid fa-eye me-1"></i> Visit</button></td>
+                <td><button class="btn btn-dang"><i class="fa-regular fa-trash-can me-1"></i> Delete</button></td>
+               </tr> -->
+            </tbody>
+        </table>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
